@@ -1,0 +1,96 @@
+\newpage
+\section{Question2}
+\paragraph{} In this section, we are going to implement
+and plot these singals below.
+
+\begin{center}
+    \begin{tabular}{ p{5cm} p{5cm} }
+     $x_o[n]=\frac{x[n]-x[-n]}{2}$ & $x_e[n]=\frac{x[n]+x[-n]}{2}$  \\ 
+      & \\
+     $
+      x_i[n] = \begin{cases}
+       x[n] &: n < 0\\
+       0 &: o.w\end{cases}
+     $ & $
+      x_r[n] = \begin{cases}
+       x[n] &: n\geq 0\\
+       0 &: o.w\end{cases}
+     $  \\  
+     
+    \end{tabular}
+
+\end{center}
+\subsection{Q2.1}
+\paragraph{}First, we define a python function for
+ each of these signals above as you can see in \textbf{Listing \ref{lst:2.1.1}}
+and a plotting them with $F_s =100$ps in the code \textbf{Listing \ref{lst:2.1.2}}
+ 
+\vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+ ,caption={Functions }
+,label=lst:2.1.1]{codes/code2.1.1.py}
+
+\vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+ ,caption={Plotting }
+,label=lst:2.1.2]{codes/code2.1.2.py}
+
+\begin{figure}[H]
+    \resizebox{\textwidth}{!}{\input{images/q2.1.pgf}}
+    \caption{Result plot of \textbf{Listing \ref{lst:2.1.2}}}
+    \label{fig:q2.1}
+\end{figure}
+
+\subsection{Q2.2}
+\paragraph{} We can rebuild $x[n]$ with $x_e[n]$
+and $x_r[n]$. First we find the odd part in the negative
+side by subtracting $x_e[n]$ from $x_r[n]$ when n>=0 and 
+time reverse and mirror respect to x axis we can get the odd
+part of negative side then sum up $x_e[n]$ with it and we get the 
+$x[n]$
+
+\begin{align}
+    z[n] = \begin{cases}
+    x_r[n] &: t \geq 0\\
+    x_e[n] -x_r[-n]+x_e[-n]&: o.w\end{cases}
+   \end{align}
+\paragraph{} python function equivalent to z[n] in \textbf{Listing \ref{lst:2.2.1}}
+and plotting in \textbf{Listing \ref{lst:2.2.2}}
+   
+\vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+ ,caption={Function }
+,label=lst:2.2.1]{codes/code2.2.1.py}
+
+\vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+ ,caption={Plotting }
+,label=lst:2.2.2]{codes/code2.2.2.py}
+
+\begin{figure}[H]
+    \resizebox{\textwidth}{!}{\input{images/q2.2.pgf}}
+    \caption{Result plot of \textbf{Listing \ref{lst:2.2.2}}}
+    \label{fig:q2.2}
+\end{figure}
+
+\subsection{Q2.3}
+\paragraph{} we repeat the same steps as previous section for
+$x_o[n]$ and $x_i[n]$ and $q[n] = x[n]$ we show that with plotting them
+
+\begin{align}
+    q[n] = \begin{cases}
+        x_i[n] &: t \le 0\\
+        2x_o[n]+x_i[-n]&: o.w\end{cases}
+   \end{align}
+
+   \vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+   ,caption={Function }
+  ,label=lst:2.3.1]{codes/code2.3.1.py}
+
+  \vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+   ,caption={plotting }
+  ,label=lst:2.3.2]{codes/code2.3.2.py}
+
+  \begin{figure}[H]
+    \resizebox{\textwidth}{!}{\input{images/q2.2.pgf}}
+    \caption{Result plot of \textbf{Listing \ref{lst:2.3.2}}}
+    \label{fig:q2.3}
+
+\end{figure}
+

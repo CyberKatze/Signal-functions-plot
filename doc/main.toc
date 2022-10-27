@@ -1,0 +1,44 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}% 
+\contentsline {section}{\numberline {2}Question1}{2}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Q1.1}{2}{subsection.2.1}% 
+\contentsline {subsubsection}{\numberline {2.1.1}Unit}{2}{subsubsection.2.1.1}% 
+\contentsline {paragraph}{}{2}{section*.2}% 
+\contentsline {subsubsection}{\numberline {2.1.2}Ramp}{3}{subsubsection.2.1.2}% 
+\contentsline {paragraph}{}{3}{section*.3}% 
+\contentsline {subsection}{\numberline {2.2}Q1.2}{5}{subsection.2.2}% 
+\contentsline {paragraph}{}{5}{section*.4}% 
+\contentsline {paragraph}{}{5}{section*.5}% 
+\contentsline {subsection}{\numberline {2.3}Q1.3}{7}{subsection.2.3}% 
+\contentsline {paragraph}{}{7}{section*.6}% 
+\contentsline {paragraph}{}{7}{section*.7}% 
+\contentsline {subsection}{\numberline {2.4}Q1.4}{8}{subsection.2.4}% 
+\contentsline {paragraph}{}{8}{section*.8}% 
+\contentsline {section}{\numberline {3}Question2}{10}{section.3}% 
+\contentsline {paragraph}{}{10}{section*.9}% 
+\contentsline {subsection}{\numberline {3.1}Q2.1}{10}{subsection.3.1}% 
+\contentsline {paragraph}{}{10}{section*.10}% 
+\contentsline {subsection}{\numberline {3.2}Q2.2}{11}{subsection.3.2}% 
+\contentsline {paragraph}{}{11}{section*.11}% 
+\contentsline {paragraph}{}{12}{section*.12}% 
+\contentsline {subsection}{\numberline {3.3}Q2.3}{13}{subsection.3.3}% 
+\contentsline {paragraph}{}{13}{section*.13}% 
+\contentsline {section}{\numberline {4}Question3}{14}{section.4}% 
+\contentsline {paragraph}{}{14}{section*.14}% 
+\contentsline {subsection}{\numberline {4.1}Q3.1}{14}{subsection.4.1}% 
+\contentsline {paragraph}{}{14}{section*.15}% 
+\contentsline {paragraph}{}{14}{section*.16}% 
+\contentsline {paragraph}{}{14}{section*.17}% 
+\contentsline {subsection}{\numberline {4.2}Q3.2}{15}{subsection.4.2}% 
+\contentsline {paragraph}{}{15}{section*.18}% 
+\contentsline {subsection}{\numberline {4.3}Q3.3}{16}{subsection.4.3}% 
+\contentsline {paragraph}{}{16}{section*.19}% 
+\contentsline {section}{\numberline {5}Question4}{17}{section.5}% 
+\contentsline {paragraph}{}{17}{section*.20}% 
+\contentsline {subsection}{\numberline {5.1}Q4.1}{17}{subsection.5.1}% 
+\contentsline {paragraph}{}{17}{section*.21}% 
+\contentsline {subsection}{\numberline {5.2}Q4.2}{17}{subsection.5.2}% 
+\contentsline {section}{\numberline {6}Question5}{18}{section.6}% 
+\contentsline {subsection}{\numberline {6.1}Q5.1}{18}{subsection.6.1}% 
+\contentsline {subsection}{\numberline {6.2}Q5.2}{18}{subsection.6.2}% 
+\contentsline {paragraph}{}{20}{figure.6.1}% 

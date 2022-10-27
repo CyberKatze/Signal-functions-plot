@@ -1,0 +1,188 @@
+\section{Question1}
+\subsection{Q1.1}
+In this section, we implement Unit and Ramp function
+with different frequencies and compare them.
+\subsubsection{Unit}
+expression \textbf{2.1} represents a unit step function 
+and \textbf{Listing \ref{lst:unit}} is an equivalent code in python 
+for this function that get an array of float numbers 
+and return an array with the same size of input as 
+output that has the same logic as expression \textbf{2.1}
+\begin{align}
+    u(t) = \begin{cases}
+     0 &: t<0\\
+     1 &: t\geq 0\end{cases}
+\end{align}
+
+\vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+ ,caption=Unit\_step function,label=lst:unit]{codes/unit.py}
+ \paragraph{} As you can see in \textbf{Listing \ref{lst:1.1}} first
+ we plot the unit step with the sample rate 10 per second and then
+ with the rate 100 per second and \textbf{Figure \ref{fig:2.1}}
+ shows both plots
+ \vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+ ,caption=Code for plotting unit\_step,label=lst:1.1]{codes/code1.1.py}
+
+ \begin{figure}[H]
+    \resizebox{\textwidth}{!}{\input{images/unit.pgf}}
+    \caption{Result plot of \textbf{Listing \ref{lst:1.1}}}
+    \label{fig:2.1}
+\end{figure}
+ \subsubsection{Ramp}
+  Like the previous section we write the \textbf{Listing \ref{lst:ramp}}  
+  python code that represents \textbf{expression 2.2} 
+  \begin{align}
+    r(t) = \begin{cases}
+     t &: t\geq 0\\
+     0 &: t< 0\end{cases}
+   \end{align}
+
+\vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+ ,caption=Unit\_step function,label=lst:ramp]{codes/ramp.py}
+ 
+ \paragraph{}So we plot the ramp function with 2 different
+ sampling rate as above in \textbf{Listing \ref{lst:1.2}}
+ 
+ \vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+ ,caption=Code for plotting ramp,label=lst:1.2]{codes/code1.2.py}
+ 
+ \begin{figure}[H]
+    \resizebox{\textwidth}{!}{\input{images/ramp.pgf}}
+    \caption{Result plot of \textbf{Listing \ref{lst:1.2}}}
+    \label{fig:2.2}
+\end{figure}
+
+
+%subsection 2.2
+\subsection{Q1.2}
+\paragraph{}In this section, we are going to plot the example in \textbf{Figure \ref{fig:ex1}}
+, using ramp and unit\_step that we implemented in the previous sections
+
+\begin{figure}[H]
+    \centering
+   \begin{tikzpicture}
+   \begin{axis}[
+       axis x line=center,
+       axis y line=center,
+       tick align=outside,
+       enlargelimits=false
+   ]
+       \addplot coordinates {
+         (-4,0)
+         (-2,0)
+         (-1,-1)
+         (0,1)
+         (2,1)
+         (2,0)
+         (4,0)
+     };
+   \end{axis}
+   \end{tikzpicture}
+   \caption{example graph of the siganl $x(t)$}
+     \label{fig:ex1}
+   \end{figure}
+
+\paragraph{} first we break down the function to:
+\\$x_1(t)=-r(t+2) * u(-t-1)$
+\\$x_2(t)=(r(2*t+2)-1) *(u(t+1)-u(-t))$
+\\$x_3(t)=u(t) -u(t-2)$
+\\$x(t) = x_1(t)+x_2(t)+x_3(t)$\\
+then we define a python function for each of them as you can
+see in \textbf{Listing \ref{lst:1.2.1}} and in \textbf{Listing \ref{lst:1.2.2}}
+we plot them 
+
+\vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+ ,caption={Functions for $x_1(t)$,$x_2(t)$,$x_3(t)$,$x(t)$}
+,label=lst:1.2.1]{codes/code1.2.1.py}
+
+
+\vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+ ,caption={Code for plotting functions $x_1(t)$,$x_2(t)$,$x_3(t)$,$x(t)$}
+,label=lst:1.2.2]{codes/code1.2.2.py}
+
+\begin{figure}[H]
+    \resizebox{.9\textwidth}{!}{\input{images/x.pgf}}
+    \caption{Result plot of \textbf{Listing \ref{lst:1.2.2}}}
+    \label{fig:2.4}
+\end{figure}
+
+%subsection 2.3
+\subsection{Q1.3}
+\paragraph{} Int this section, we are going to plot the $y_1(t)$
+in the \textbf{Figure \ref{fig:ex2}} by shifting and compressing
+$x(t)$ in the previous section
+
+\begin{figure}[H]
+  \centering
+ \begin{tikzpicture}
+ \begin{axis}[
+   axis x line=center,
+   axis y line=center,
+   tick align=outside,
+   enlargelimits=false
+ ]
+   \addplot coordinates {
+       (-4,0)
+       (-2,0)
+       (-1.5,-1)
+       (-1,1)
+       (0,1)
+       (0,0)
+       (2,0)
+   };
+ \end{axis}
+ \end{tikzpicture}
+ \caption{example graph of the siganl $y_1(t)$}
+  \label{fig:ex2}
+\end{figure}
+\paragraph{} first we shift $x(t)$, 2 unit left and then compress 
+it with sacle of 2 as you see in \textbf{Listing \ref{lst:1.3.1}} below
+
+\vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+ ,caption={Code represents $y_1(t) = x(2t+2)$}
+,label=lst:1.3.1]{codes/code1.3.1.py}
+
+\begin{figure}[H]
+  \resizebox{\textwidth}{!}{\input{images/y1.pgf}}
+  \caption{Result plot of \textbf{Listing \ref{lst:1.3.1}}}
+  \label{fig:2.6}
+\end{figure}
+
+%subsection 2.4
+\subsection{Q1.4}
+In this section, we are going to do the same steps as previous section
+for $y_2(t)$ in \textbf{Figure \ref{fig:ex3}}
+
+\begin{figure}[H]
+  \centering
+ \begin{tikzpicture}
+ \begin{axis}[
+   axis x line=center,
+   axis y line=center,
+   tick align=outside,
+   enlargelimits=false
+ ]
+   \addplot coordinates {
+       (-3,0)
+       (-1,0)
+       (-1,1)
+       (1,1)
+       (2,-1)
+       (3,0)
+       (4,0)
+   };
+ \end{axis}
+ \end{tikzpicture}
+ \caption{example graph of the siganl $y_2(t)$}
+   \label{fig:ex3}
+\end{figure}
+\paragraph{} as you see in \textbf{Listing \ref{lst:1.4.1}}
+\vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+ ,caption={Code represents $y_2(t) = x(-t+1)$}
+,label=lst:1.4.1]{codes/code1.4.1.py}
+
+\begin{figure}[H]
+  \resizebox{\textwidth}{!}{\input{images/y2.pgf}}
+  \caption{Result plot of \textbf{Listing \ref{lst:1.4.1}}}
+  \label{fig:2.8}
+\end{figure}

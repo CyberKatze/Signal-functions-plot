@@ -1,0 +1,146 @@
+\ProvidesPackage{mystyle}[]
+\RequirePackage{graphicx}
+\RequirePackage[utf8]{inputenc}
+\usepackage{bookmark}
+\usepackage{amsmath, amsfonts, amsthm} % Math packages
+\usepackage{xcolor}
+\usepackage{listings} % Code listings, with syntax highlighting
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+\usepackage[english]{babel} % English language hyphenation
+
+\usepackage{graphicx} % Required for inserting images
+\graphicspath{{Figures/}{./}} % Specifies where to look for included images (trailing slash required)
+
+\usepackage{booktabs} % Required for better horizontal rules in tables
+
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,.1,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\definecolor{commentgreen}{RGB}{2,112,10}
+\definecolor{eminence}{RGB}{108,48,130}
+\definecolor{weborange}{RGB}{255,165,0}
+\definecolor{frenchplum}{RGB}{129,20,83}
+
+\lstdefinestyle{pystyle}{
+    captionpos=b,
+    showstringspaces=true,
+    basicstyle=\ttfamily,
+    keywordstyle=\color{blue}\ttfamily\textbf,
+    identifierstyle=\color{magenta}\ttfamily,
+    stringstyle=\color{mPurple}\ttfamily,
+    commentstyle=\color{cyan}\ttfamily\textit,
+    backgroundcolor=\color{white},
+    numberstyle=\tiny\color{mGray},
+    columns=fullflexible,
+    classoffset=1, % starting new class
+    otherkeywords={>,<,.,;,-,!,=,~},
+    morekeywords={>,<,.,;,-,!,=,~},
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showtabs=false,                  
+    tabsize=2,
+    showstringspaces=false
+    language=python
+}
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\usepackage{enumitem} % Required for list customisation
+\setlist{noitemsep} % No spacing between list items
+
+%--------------------------------------------------------------------
+%	DOCUMENT MARGINS
+%----------------------------------------------------------------------------------------
+
+\usepackage{geometry} % Required for adjusting page dimensions and margins
+
+\geometry{
+	paper=a4paper, % Paper size, change to letterpaper for US letter size
+	top=2.5cm, % Top margin
+	bottom=3cm, % Bottom margin
+	left=2.5cm, % Left margin
+	right=2.5cm, % Right margin
+	headheight=1.5cm, % Header height
+	footskip=1.5cm, % Space from the bottom margin to the baseline of the footer
+	headsep=0.75cm, % Space from the top margin to the baseline of the header
+	%showframe, % Uncomment to show how the type block is set on the page
+}
+
+%----------------------------------------------------------------------------------------
+%	FONTS
+%----------------------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Use 8-bit encoding
+
+\usepackage{fourier} % Use the Adobe Utopia font for the document
+
+%----------------------------------------------------------------------------------------
+%	SECTION TITLES
+%----------------------------------------------------------------------------------------
+
+\usepackage{sectsty} % Allows customising section commands
+
+\sectionfont{\vspace{6pt}\normalfont\scshape\bfseries} % \section{} styling
+\subsectionfont{\normalfont\bfseries} % \subsection{} styling
+\subsubsectionfont{\normalfont\itshape} % \subsubsection{} styling
+\paragraphfont{\normalfont\scshape} % \paragraph{} styling
+
+%----------------------------------------------------------------------------------------
+%	HEADERS AND FOOTERS
+%----------------------------------------------------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\includegraphics[height=1.3cm]{images/Buali-sina.png}}
+\lhead{Signal Project Report}
+\cfoot{\thepage}
+
+\newcommand*{\project}[1]{\gdef\@project{#1}%
+}
+\newcommand*{\@project}{}
+
+\newcommand*{\logo}[1]{\gdef\@logo{#1}%
+}
+\newcommand*{\@logo}{logo}
+\newcommand*{\supervisor}[1]{\gdef\@supervisor{#1}%
+}
+\newcommand*{\@supervisor}{\texttt{\string\supervisor} currently
+not set. Please fix this.}
+\renewcommand*{\maketitle}{%
+\begin{titlepage}
+\centering
+{
+	\includegraphics[width=3cm]{images/Buali-sina.png}\par
+}\vspace{1cm}
+	\centering
+{\scshape\LARGE Bu-ali Sina University \par}
+\vspace{1cm}
+{\scshape\Large\@project\unskip\strut\par}
+\vspace{1.5cm}
+\rule{\linewidth}{0.5pt}
+{\huge\bfseries\@title\unskip\strut\par}
+\rule{\linewidth}{0.5pt}
+{\Large\itshape\@author\unskip\strut\par}
+\vfill
+supervised by\par
+\@supervisor\unskip\strut\par
+
+\vfill
+
+{\large \@date\par}
+\end{titlepage}
+}
+\endinput

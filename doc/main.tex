@@ -1,0 +1,36 @@
+\documentclass[12pt]{article}
+\usepackage{float}
+\usepackage{mystyle}
+\usepackage{listings}
+\usepackage{pgf}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.16}
+\usepackage{import}
+\tolerance=1000
+\hyphenpenalty=1000
+\author{Student:\newline
+Mehrdad Shahidi}
+\title{Signal Project Report}
+\project{Signal Project}
+\supervisor{Dr.Mahdi Abbasi}
+%
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+%section1
+\section{Introduction}
+This article is a report for singal project. we have used \textbf{Numpy , scipy, matplotlib}
+for this project.
+\import{sections/}{q1}
+\import{sections/}{q2}
+\import{sections/}{q3}
+\import{sections/}{q4}
+\import{sections/}{q5}
+
+\end{document}   

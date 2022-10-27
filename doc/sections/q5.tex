@@ -1,0 +1,46 @@
+
+\newpage
+\section{Question5}
+Convolution of signals $x_1[n]$ and $x_2[n]$ :
+\begin{align}
+    y[n] = \sum_{k=-\infty}^{+\infty}x_1[k]x_2[n-k]
+    \label{conv}
+\end{align}
+\subsection{Q5.1}
+We define a python function for convolution
+ as below \textbf{Listing \ref{lst:5.1.1}}
+
+ \vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+   ,caption={Convolution function}
+  ,label=lst:5.1.1]{codes/code5.1.1.py}
+
+\subsection{Q5.2}
+For each signals in the below we define a function and then
+we plot each of them and their convolution
+\begin{center}
+    \begin{tabular}{p{8cm}}
+        
+        $x_1[n] = (\frac{1}{2^{-n+1}}).(u[n+2]-u[n-2])$\\
+        \\
+        $x_2[n] = \begin{cases}
+            \sum_{k=-\infty}^{n}(sin(2k)+e^{j\pi k}).(u[k+3]-u[k-5]) &:0<n<7\\
+            0 &: O.W
+        \end{cases}$
+    \end{tabular}    
+    \end{center}
+
+    \vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+    ,caption={functions}
+   ,label=lst:5.2.1]{codes/code5.2.1.py}
+   
+   \vspace{2ex}\lstinputlisting[language=python, style=pystyle,
+   ,caption={Convolt and plot}
+  ,label=lst:5.2.2]{codes/code5.2.2.py}
+  
+  \paragraph{}
+  
+  \begin{figure}[h]
+    \resizebox{\textwidth}{!}{\input{images/q5.2.pgf}}
+    \caption{Result plot of \textbf{Listing \ref{lst:5.2.2}}}
+    \label{fig:q5}
+\end{figure}
